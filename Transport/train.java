@@ -72,5 +72,9 @@ public class train extends transport {
                 " , отходит от " + getStation() + " и следует до станции " + getFinalStop() + ". Цена поездки - " + getPriceOfTrip() + ", в поезде " + getWagons() + " вагонов.");
 
     }
+
+    public void refill() {
+        System.out.println("Заправка дизелем");
+    }
 }
 

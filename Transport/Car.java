@@ -110,4 +110,9 @@ public class Car extends transport {
                 ",  объем двигателя - " + getEngineVolume() + ", коробка передач: " + getTransmission() + ", регистрационный номер: "
                 + correctRegNumber() + ", количество мест: " + getSeats() + ", летняя или зимняя резина: " + isRubberSum());
     }
+
+    public void refill() {
+        System.out.println("Заправка бензином или дизелем на заправке");
+        System.out.println("Зарядка на электроду-парковке, если электрокар");
+    }
 }

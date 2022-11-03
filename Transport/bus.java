@@ -47,5 +47,9 @@ package Transport;
                  " , начальная остановка: " + getBusStation() + " и следует до остановки: " + getBusFinalStation() + ". Цена поездки: " + getTicketPrice());
 
      }
+
+     public void refill() {
+         System.out.println("Заправка бензином или дизелем на заправке");
+     }
  }
 

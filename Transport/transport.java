@@ -1,6 +1,6 @@
 package Transport;
 
-public class transport {
+public abstract class transport {
     public String brand;
     public String model;
     protected int productionYear;
@@ -87,5 +87,6 @@ public class transport {
             }
         }
 
+        public abstract void refill();
 }
 

@@ -18,6 +18,12 @@ public class  Main {
         kiaSportage4.printCar();
         hyundaiAvante.printCar();
 
+        ladaGrande.refill();
+        audiA8.refill();
+        bmwZ8.refill();
+        kiaSportage4.refill();
+        hyundaiAvante.refill();
+
         System.out.println(" ");
 
 
@@ -26,6 +32,9 @@ public class  Main {
 
         lastochka.printTrain();
         leningrad.printTrain();
+
+        lastochka.refill();
+        leningrad.refill();
 
         System.out.println(" ");
 
@@ -37,6 +46,10 @@ public class  Main {
         gaz.printBus();
         liaz.printBus();
         man.printBus();
+
+        gaz.refill();
+        liaz.refill();
+        man.refill();
 
     }
 }
