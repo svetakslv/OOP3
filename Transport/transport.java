@@ -36,13 +36,13 @@ public class transport {
             this.color = "белый";
         } else {
             this.color = color;
-            if (speed == 0) {
+        }
+        if (speed <= 0) {
                 this.speed = 0;
             } else {
                 this.speed = speed;
             }
         }
-    }
 
     public String getBrand() {
         return brand;
@@ -80,7 +80,7 @@ public class transport {
 
 
         public void setSpeed (int speed){
-            if (speed == 0) {
+            if (speed <= 0) {
                 this.speed = 0;
             } else {
                 this.speed = speed;

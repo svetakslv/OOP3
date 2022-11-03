@@ -1,4 +1,5 @@
 import Transport.Car;
+import Transport.train;
 
 public class  Main {
 
@@ -15,6 +16,14 @@ public class  Main {
         bmwZ8.printCar();
         kiaSportage4.printCar();
         hyundaiAvante.printCar();
+
+
+        train lastochka = new train("Ласточка", "В-901", 2011, "России", null, 301, 3500, 6.55, "Белорусский вокзал", "Минск - Пассажирский", 11);
+        train leningrad = new train("Ленинград", "D-125", 2019, "России", null, 270, 1700, 8.49, "Ленинградский вокзал","Ленинград - Пассажирский",8);
+
+        lastochka.printTrain();
+        leningrad.printTrain();
+
 
     }
 }
