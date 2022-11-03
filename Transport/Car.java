@@ -10,10 +10,18 @@ public class Car extends transport {
     public Car(String brand, String model, int productionYear, String productionCountry, String color, int speed,
                double engineVolume, String transmission, String regNumber, int seats, boolean rubberSum) {
         super(brand, model, productionYear, productionCountry, color, speed);
-        this.transmission = "АКПП";
+
+        if (transmission == null) {
+            this.transmission = "АКПП";
+        }else{
+            this.transmission = "МКПП";
+        }
         this.regNumber = "х000х000";
-        this.seats = 5;
-        this.rubberSum = true;
+        if (seats <= 0) {
+            this.seats = 5;
+        }else{
+            this.seats = 4;
+        }
         if (Double.compare(engineVolume, 0.0) == 0) {
             this.engineVolume = 1.5;
         } else {
@@ -74,12 +82,12 @@ public class Car extends transport {
     }
 
     public boolean setRubberSum() {
-        if (!rubberSum) {
-            this.rubberSum = rubberSum;
+        if (rubberSum == false) {
+            this.rubberSum = !rubberSum;
         }else{
-            this.rubberSum = true;
+            this.rubberSum = false;
         }
-        return rubberSum;
+        return this.rubberSum;
     }
 
 
