@@ -1,13 +1,13 @@
 package Transport;
 
-public class Car extends transport {
+public class car extends transport {
     private double engineVolume;
     private String transmission;
     private String regNumber;
     protected int seats;
     protected boolean rubberSum;
 
-    public Car(String brand, String model, int productionYear, String productionCountry, String color, int speed,
+    public car(String brand, String model, int productionYear, String productionCountry, String color, int speed,
                double engineVolume, String transmission, String regNumber, int seats, boolean rubberSum) {
         super(brand, model, productionYear, productionCountry, color, speed);
 
@@ -109,5 +109,10 @@ public class Car extends transport {
                 ",  год выпуска: " + getProductionYear() + ",  страна сборки: " + getProductionCountry() + " цвет: " + getColor() +
                 ",  объем двигателя - " + getEngineVolume() + ", коробка передач: " + getTransmission() + ", регистрационный номер: "
                 + correctRegNumber() + ", количество мест: " + getSeats() + ", летняя или зимняя резина: " + isRubberSum());
+    }
+
+    public void refill() {
+        System.out.println("Заправка бензином или дизелем на заправке");
+        System.out.println("Зарядка на электроду-парковке, если электрокар");
     }
 }

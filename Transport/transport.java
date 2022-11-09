@@ -1,6 +1,6 @@
 package Transport;
 
-public class transport {
+public abstract class transport {
     public String brand;
     public String model;
     protected int productionYear;
@@ -36,13 +36,13 @@ public class transport {
             this.color = "белый";
         } else {
             this.color = color;
-            if (speed == 0) {
+        }
+        if (speed <= 0) {
                 this.speed = 0;
             } else {
                 this.speed = speed;
             }
         }
-    }
 
     public String getBrand() {
         return brand;
@@ -80,12 +80,13 @@ public class transport {
 
 
         public void setSpeed (int speed){
-            if (speed == 0) {
+            if (speed <= 0) {
                 this.speed = 0;
             } else {
                 this.speed = speed;
             }
         }
 
+        public abstract void refill();
 }
 
