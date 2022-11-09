@@ -52,4 +52,3 @@ package Transport;
          System.out.println("Заправка бензином или дизелем на заправке");
      }
  }
-

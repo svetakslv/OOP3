@@ -4,7 +4,6 @@ import Transport.train;
 
 public class  Main {
 
-
         public static void main(String[] args) {
         car ladaGrande = new car("Lada", "Grande", 2015, "Россия", "желтый", 0, 1.7, null, "х000х000", 4, false);
         car audiA8 = new car("Audi", "A8 50 L TDI quattro", 2020, "Германия", "черный", 200, 3.0, null, "х000х000", 0, true);

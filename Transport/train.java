@@ -77,4 +77,3 @@ public class train extends transport {
         System.out.println("Заправка дизелем");
     }
 }
-
