@@ -1,13 +1,13 @@
 package Transport;
 
- public class bus extends transport {
+ public class Bus extends Transport {
      public int ticketPrice;
      private String busStation;
      private String busFinalStation;
      public double busTravelTime;
 
 
-     public bus(String brand, String model, int productionYear, String productionCountry, String color,
+     public Bus(String brand, String model, int productionYear, String productionCountry, String color,
                 int speed, int ticketPrice, String busStation, String busFinalStation, double busTravelTime) {
          super(brand, model, productionYear, productionCountry, color, speed);
          this.ticketPrice = ticketPrice;
