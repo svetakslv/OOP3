@@ -1,4 +1,4 @@
-package Transport;
+/*package Transport;
 
 public class Train extends Transport {
     public int priceOfTrip;
@@ -76,4 +76,4 @@ public class Train extends Transport {
     public void refill() {
         System.out.println("Заправка дизелем");
     }
-}
+}*/

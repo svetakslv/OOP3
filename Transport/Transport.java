@@ -3,14 +3,25 @@ package Transport;
 public abstract class Transport {
     public String brand;
     public String model;
-    protected int productionYear;
-    protected String productionCountry;
-    protected String color;
-    public int speed;
+/*    protected int productionYear;*/
+/*    protected String productionCountry;*/
+/*    protected String color;*/
+/*    public int speed;*/
 
+    public Transport(String brand, String model) {
+        if (brand == null) {
+            this.brand = "default";
+        }else {
+            this.brand = brand;
+        }
+        if (model == null) {
+            this.model = "default";
+        }else {
+            this.model = model;
+       }
+    }
 
-
-    public Transport(String brand, String model, int productionYear, String productionCountry, String color, int speed) {
+    /*    public Transport(String brand, String model, int productionYear, String productionCountry, String color, int speed) {
         if (brand == null) {
             this.brand = "default";
         }else {
@@ -42,7 +53,7 @@ public abstract class Transport {
             } else {
                 this.speed = speed;
             }
-        }
+        }*/
 
     public String getBrand() {
         return brand;
@@ -52,40 +63,43 @@ public abstract class Transport {
         return model;
     }
 
-    public int getProductionYear () {
+/*    public int getProductionYear () {
             return productionYear;
-        }
+        }*/
 
-        public String getProductionCountry () {
+/*        public String getProductionCountry () {
             return productionCountry;
-        }
+        }*/
 
-        public String getColor () {
+/*        public String getColor () {
             return color;
-        }
+        }*/
 
 
-        public void setColor (String body){
+/*        public void setColor (String body){
             if (body == null) {
                 this.color = "белый";
             } else {
                 this.color = body;
             }
-        }
+        }*/
 
 
-        public int getSpeed () {
+/*        public int getSpeed () {
             return speed;
-        }
+        }*/
 
 
-        public void setSpeed (int speed){
+/*        public void setSpeed (int speed){
             if (speed <= 0) {
                 this.speed = 0;
             } else {
                 this.speed = speed;
             }
-        }
+        }*/
 
-        public abstract void refill();
-}
+/*        public abstract void refill();*/
+    public abstract void start();
+    public abstract void finish();
+
+    }
