@@ -1,6 +1,6 @@
 package Transport;
 
-public abstract class transport {
+public abstract class Transport {
     public String brand;
     public String model;
     protected int productionYear;
@@ -10,7 +10,7 @@ public abstract class transport {
 
 
 
-    public transport(String brand, String model, int productionYear, String productionCountry, String color, int speed) {
+    public Transport(String brand, String model, int productionYear, String productionCountry, String color, int speed) {
         if (brand == null) {
             this.brand = "default";
         }else {
@@ -89,4 +89,3 @@ public abstract class transport {
 
         public abstract void refill();
 }
-

@@ -1,13 +1,13 @@
 package Transport;
 
-public class car extends transport {
+public class Car extends Transport {
     private double engineVolume;
     private String transmission;
     private String regNumber;
     protected int seats;
     protected boolean rubberSum;
 
-    public car(String brand, String model, int productionYear, String productionCountry, String color, int speed,
+    public Car(String brand, String model, int productionYear, String productionCountry, String color, int speed,
                double engineVolume, String transmission, String regNumber, int seats, boolean rubberSum) {
         super(brand, model, productionYear, productionCountry, color, speed);
 
