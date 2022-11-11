@@ -24,12 +24,12 @@ public class Trucks extends Transport {
         }
     }
 
-    public void start() {
+    public static void start() {
         System.out.println("Все из прицепа убрали?");
 
     }
 
-    public void finish() {
+    public static void finish() {
         System.out.println("Явный победитель Scania R500");
 
     }

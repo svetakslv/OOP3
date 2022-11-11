@@ -47,25 +47,28 @@ public class  Main {
         man.refill();*/
 
 
-            Car lexus = new Car("Lexus", "LC 500", 5.0);
-            Car ford = new Car("Ford", "Mustang Shelby GT500", 5.2);
-            Car bmw = new Car("BMW", "i8",1.5);
-            Car chevrolet = new Car("Chevrolet", "Camaro", 2.0);
+            Car lexus = new Car("Lexus", " LC 500", 5.0);
+            Car ford = new Car("Ford", " Mustang Shelby GT500", 5.2);
+            Car bmw = new Car("BMW", " i8",1.5);
+            Car chevrolet = new Car("Chevrolet", " Camaro", 2.0);
 
             Trucks man = new Trucks("MAN"," TGL",6.9);
-            Trucks volvo = new Trucks("Volvo", "FH",12.8);
-            Trucks scania = new Trucks("Scania", "R500", 16.0);
-            Trucks kamaz = new Trucks("Камаз", "6520", 11.8);
+            Trucks volvo = new Trucks("Volvo", " FH",12.8);
+            Trucks scania = new Trucks("Scania", " R500", 16.0);
+            Trucks kamaz = new Trucks("Камаз", " 6520", 11.8);
 
-            Bus liaz = new Bus("Лиаз-","4292",4.43);
-            Bus icarus = new Bus("Icarus", "125", 7.7);
-            Bus mercedes = new Bus("Mercedes-Benz", "Sprinter", 3.0);
-            Bus higer = new Bus("Higer","KLQ 6885",6.7);
+            Bus liaz = new Bus("Лиаз-"," 4292",4.43);
+            Bus icarus = new Bus("Icarus", " 125", 7.7);
+            Bus mercedes = new Bus("Mercedes-Benz", " Sprinter", 3.0);
+            Bus higer = new Bus("Higer"," KLQ 6885",6.7);
 
             lexus.printCar();
             ford.printCar();
             bmw.printCar();
             chevrolet.printCar();
+
+            Car.start();
+            Car.finish();
 
             System.out.println();
 
@@ -74,12 +77,18 @@ public class  Main {
             scania.printTrucks();
             kamaz.printTrucks();
 
+            Trucks.start();
+            Trucks.finish();
+
             System.out.println();
 
             liaz.printBus();
             icarus.printBus();
             mercedes.printBus();
             higer.printBus();
+
+            Bus.start();
+            Bus.finish();
 
     }
 }

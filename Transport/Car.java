@@ -63,13 +63,12 @@ public class Car extends Transport {
         }
     }
 
-    public void start() {
+    public static void start() {
         System.out.println("3, 2, 1!");
     }
-    public void finish() {
+    public static void finish() {
         System.out.println("Первым финиширует Ford Mustang Shelby GT500, с небольшим отрывом");
     }
-
     public void printCar() {
         System.out.println("Марка и модель машины: " + getBrand() + getModel() + " , объемом двигателя: " + getEngineVolume());
     }

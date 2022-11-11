@@ -63,11 +63,11 @@ package Transport;
          }
      }
 
-     public void start() {
+     public static void start() {
          System.out.println("Разгоняйтесь не торопясь, вам еще пассажиров возить");
      }
 
-     public void finish() {
+     public static void finish() {
          System.out.println("Новая модель Icarus'а оправдала все ожидания!");
      }
 
