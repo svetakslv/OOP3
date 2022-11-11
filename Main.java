@@ -52,7 +52,7 @@ public class  Main {
             Car bmw = new Car("BMW", "i8",1.5);
             Car chevrolet = new Car("Chevrolet", "Camaro", 2.0);
 
-            Trucks man = new Trucks("MAN","TGL",6.9);
+            Trucks man = new Trucks("MAN"," TGL",6.9);
             Trucks volvo = new Trucks("Volvo", "FH",12.8);
             Trucks scania = new Trucks("Scania", "R500", 16.0);
             Trucks kamaz = new Trucks("Камаз", "6520", 11.8);
