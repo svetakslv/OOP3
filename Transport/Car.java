@@ -2,8 +2,8 @@ package Transport;
 
 public abstract class Car extends Transport implements Competing {
     private double engineVolume;
-    private int[] bestLapTime = {3, 5, 2, 1};
-    private int[] maximumSpeed = {270, 290, 250, 240};
+    public static final int[] bestLapTime = {3, 5, 2, 1};
+    public static final int[] maximumSpeed = {270, 290, 250, 240};
 
    // private String transmission;
    // private String regNumber;

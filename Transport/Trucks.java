@@ -2,8 +2,8 @@ package Transport;
 
 public abstract class Trucks extends Transport implements Competing{
     private double engineVolume;
-    private int[] bestLapTime = new int[4];
-    private int[] maximumSpeed = new int[4];
+    public static final int[] bestLapTime = new int[4];
+    public static final int[] maximumSpeed = new int[4];
 
     public Trucks(String brand, String model, double engineVolume) {
         super(brand, model);

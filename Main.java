@@ -1,3 +1,6 @@
+import Driver.DriverB;
+import Driver.DriverC;
+import Driver.DriverD;
 import Transport.Bus;
 import Transport.Car;
 import Transport.Trucks;
@@ -49,6 +52,21 @@ public class  Main {
 
         Car lexus = new Car("Lexus", " LC 500", 5.0) {
             @Override
+            public void printB() {
+
+            }
+
+            @Override
+            public void printC() {
+
+            }
+
+            @Override
+            public void printD() {
+
+            }
+
+            @Override
             public void getPitStop(String pit_stop) {
             }
 
@@ -62,7 +80,35 @@ public class  Main {
                 return super.getMaximumSpeed();
             }
         };
+        DriverB driverB = new DriverB("Иванов Иван", "B", 10, "lexus") {
+            @Override
+            protected String getModel() {
+                return null;
+            }
+
+            @Override
+            protected String getBrand() {
+                return null;
+            }
+        };
+        System.out.println(driverB);
+
         Car ford = new Car("Ford", " Mustang Shelby GT500", 5.2) {
+            @Override
+            public void printB() {
+
+            }
+
+            @Override
+            public void printC() {
+
+            }
+
+            @Override
+            public void printD() {
+
+            }
+
             @Override
             public void getPitStop(String pit_stop) {
             }
@@ -79,6 +125,21 @@ public class  Main {
         };
         Car bmw = new Car("BMW", " i8", 1.5) {
             @Override
+            public void printB() {
+
+            }
+
+            @Override
+            public void printC() {
+
+            }
+
+            @Override
+            public void printD() {
+
+            }
+
+            @Override
             public void getPitStop(String pit_stop) {
             }
 
@@ -93,6 +154,21 @@ public class  Main {
             }
         };
         Car chevrolet = new Car("Chevrolet", " Camaro", 2.0) {
+            @Override
+            public void printB() {
+
+            }
+
+            @Override
+            public void printC() {
+
+            }
+
+            @Override
+            public void printD() {
+
+            }
+
             @Override
             public void getPitStop(String pit_stop) {
             }
@@ -110,6 +186,21 @@ public class  Main {
 
         Trucks man = new Trucks("MAN", " TGL", 6.9) {
             @Override
+            public void printB() {
+
+            }
+
+            @Override
+            public void printC() {
+
+            }
+
+            @Override
+            public void printD() {
+
+            }
+
+            @Override
             public void getPitStop(String pit_stop) {
             }
 
@@ -123,7 +214,35 @@ public class  Main {
                 return super.getMaximumSpeed();
             }
         };
+        DriverC driverC = new DriverC("Наумов Николай", "C", 7, "man") {
+            @Override
+            protected String getModel() {
+                return null;
+            }
+
+            @Override
+            protected String getBrand() {
+                return null;
+            }
+        };
+        System.out.println(driverC);
+
         Trucks volvo = new Trucks("Volvo", " FH", 12.8) {
+            @Override
+            public void printB() {
+
+            }
+
+            @Override
+            public void printC() {
+
+            }
+
+            @Override
+            public void printD() {
+
+            }
+
             @Override
             public void getPitStop(String pit_stop) {
             }
@@ -140,6 +259,21 @@ public class  Main {
         };
         Trucks scania = new Trucks("Scania", " R500", 16.0) {
             @Override
+            public void printB() {
+
+            }
+
+            @Override
+            public void printC() {
+
+            }
+
+            @Override
+            public void printD() {
+
+            }
+
+            @Override
             public void getPitStop(String pit_stop) {
             }
 
@@ -154,6 +288,21 @@ public class  Main {
             }
         };
         Trucks kamaz = new Trucks("Камаз", " 6520", 11.8) {
+            @Override
+            public void printB() {
+
+            }
+
+            @Override
+            public void printC() {
+
+            }
+
+            @Override
+            public void printD() {
+
+            }
+
             @Override
             public void getPitStop(String pit_stop) {
             }
@@ -171,6 +320,21 @@ public class  Main {
 
         Bus liaz = new Bus("Лиаз-", " 4292", 4.43) {
             @Override
+            public void printB() {
+
+            }
+
+            @Override
+            public void printC() {
+
+            }
+
+            @Override
+            public void printD() {
+
+            }
+
+            @Override
             public void getPitStop(String pit_stop) {
             }
 
@@ -184,7 +348,35 @@ public class  Main {
                 return super.getMaximumSpeed();
             }
         };
+        DriverD driverD = new DriverD("Волков Алексей", "D", 17, "liaz") {
+            @Override
+            protected String getModel() {
+                return null;
+            }
+
+            @Override
+            protected String getBrand() {
+                return null;
+            }
+        };
+        System.out.println(driverD);
+
         Bus icarus = new Bus("Icarus", " 125", 7.7) {
+            @Override
+            public void printB() {
+
+            }
+
+            @Override
+            public void printC() {
+
+            }
+
+            @Override
+            public void printD() {
+
+            }
+
             @Override
             public void getPitStop(String pit_stop) {
             }
@@ -201,6 +393,21 @@ public class  Main {
         };
         Bus mercedes = new Bus("Mercedes-Benz", " Sprinter", 3.0) {
             @Override
+            public void printB() {
+
+            }
+
+            @Override
+            public void printC() {
+
+            }
+
+            @Override
+            public void printD() {
+
+            }
+
+            @Override
             public void getPitStop(String pit_stop) {
             }
 
@@ -215,6 +422,21 @@ public class  Main {
             }
         };
         Bus higer = new Bus("Higer", " KLQ 6885", 6.7) {
+            @Override
+            public void printB() {
+
+            }
+
+            @Override
+            public void printC() {
+
+            }
+
+            @Override
+            public void printD() {
+
+            }
+
             @Override
             public void getPitStop(String pit_stop) {
             }

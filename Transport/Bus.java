@@ -42,8 +42,8 @@ package Transport;
      }*/
 
      private double engineVolume;
-     private int[] bestLapTime = new int[4];
-     private int[] maximumSpeed = new int[4];
+     public static final int[] bestLapTime = new int[4];
+     public static final int[] maximumSpeed = new int[4];
      public Bus(String brand, String model, double engineVolume) {
          super(brand, model);
          if (Double.compare(engineVolume, 0.0) == 0) {

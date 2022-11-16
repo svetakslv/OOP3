@@ -1,6 +1,6 @@
 package Transport;
 
-public abstract class Transport {
+public abstract class Transport{
     public String brand;
     public String model;
 /*    protected int productionYear;*/
@@ -106,4 +106,15 @@ public abstract class Transport {
     }
 
     public abstract void getPitStop();
+
+    public void startMoving() {
+    }
+
+    public void stopMoving() {
+    }
+
+    public abstract void printB();
+    public abstract void printC();
+    public abstract void printD();
+
 }
