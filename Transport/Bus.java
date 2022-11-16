@@ -1,6 +1,6 @@
 package Transport;
 
- public class Bus extends Transport {
+ public abstract class Bus extends Transport implements Competing {
      /*    public int ticketPrice;*/
      /*    private String busStation;*/
      /*    private String busFinalStation;*/
@@ -40,8 +40,10 @@ package Transport;
 /*     public void refill() {
          System.out.println("Заправка бензином или дизелем на заправке");
      }*/
-     private double engineVolume;
 
+     private double engineVolume;
+     private int[] bestLapTime = new int[4];
+     private int[] maximumSpeed = new int[4];
      public Bus(String brand, String model, double engineVolume) {
          super(brand, model);
          if (Double.compare(engineVolume, 0.0) == 0) {
@@ -63,16 +65,38 @@ package Transport;
          }
      }
 
-     public static void start() {
-         System.out.println("Разгоняйтесь не торопясь, вам еще пассажиров возить");
+     public void start() {
+         System.out.printf("Старт %s %s",
+                 this.getBrand(),
+                 this.getModel());
      }
 
-     public static void finish() {
-         System.out.println("Новая модель Icarus'а оправдала все ожидания!");
+     public void finish() {
+         System.out.printf("Финиш %s %s",
+                 this.getBrand(),
+                 this.getModel());
      }
 
      public void printBus() {
          System.out.println("Марка и модель машины: " + getBrand() + getModel() + " , объемом двигателя: " + getEngineVolume());
      }
+
+     @Override
+     public void getPitStop() {
+         System.out.printf("Пит-стоп на 4 круге %s %s ",
+                 this.getBrand(),
+                 this.getModel());
+     }
+
+     @Override
+     public int[] getBestLapTime() {
+         return bestLapTime;
+     }
+
+     @Override
+     public int[] getMaximumSpeed() {
+         return maximumSpeed;
+     }
  }
+
 

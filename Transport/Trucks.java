@@ -1,7 +1,9 @@
 package Transport;
 
-public class Trucks extends Transport {
+public abstract class Trucks extends Transport implements Competing{
     private double engineVolume;
+    private int[] bestLapTime = new int[4];
+    private int[] maximumSpeed = new int[4];
 
     public Trucks(String brand, String model, double engineVolume) {
         super(brand, model);
@@ -24,17 +26,36 @@ public class Trucks extends Transport {
         }
     }
 
-    public static void start() {
-        System.out.println("Все из прицепа убрали?");
-
+    public void start() {
+        System.out.printf("Старт %s %s",
+                this.getBrand(),
+                this.getModel());
     }
 
-    public static void finish() {
-        System.out.println("Явный победитель Scania R500");
-
+    public void finish() {
+        System.out.printf("Финиш %s %s",
+                this.getBrand(),
+                this.getModel());
     }
 
     public void printTrucks() {
         System.out.println("Марка и модель машины: " + getBrand() + getModel() + " , объемом двигателя: " + getEngineVolume());
+    }
+
+    @Override
+    public void getPitStop() {
+        System.out.printf("Пит-стоп на 2 круге %s %s ",
+                this.getBrand(),
+                this.getModel());
+    }
+
+    @Override
+    public int[] getBestLapTime() {
+        return bestLapTime;
+    }
+
+    @Override
+    public int[] getMaximumSpeed() {
+        return maximumSpeed;
     }
 }

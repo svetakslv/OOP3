@@ -1,7 +1,10 @@
 package Transport;
 
-public class Car extends Transport {
+public abstract class Car extends Transport implements Competing {
     private double engineVolume;
+    private int[] bestLapTime = {3, 5, 2, 1};
+    private int[] maximumSpeed = {270, 290, 250, 240};
+
    // private String transmission;
    // private String regNumber;
    // protected int seats;
@@ -63,15 +66,40 @@ public class Car extends Transport {
         }
     }
 
-    public static void start() {
-        System.out.println("3, 2, 1!");
+    public void start() {
+        System.out.printf("Старт %s %s",
+                this.getBrand(),
+                this.getModel());
     }
-    public static void finish() {
-        System.out.println("Первым финиширует Ford Mustang Shelby GT500, с небольшим отрывом");
+
+    public void finish() {
+        System.out.printf("Финиш %s %s",
+                this.getBrand(),
+                this.getModel());
     }
     public void printCar() {
         System.out.println("Марка и модель машины: " + getBrand() + getModel() + " , объемом двигателя: " + getEngineVolume());
     }
+
+    @Override
+    public void getPitStop() {
+        System.out.printf("Пит-стоп на 3 круге %s %s ",
+                this.getBrand(),
+                this.getModel());
+
+    }
+
+    @Override
+    public int[] getBestLapTime() {
+        return bestLapTime;
+    }
+
+    @Override
+    public int[] getMaximumSpeed() {
+        return maximumSpeed;
+    }
+}
+
     /*   public String getTransmission() {
         return this.transmission;
     }
@@ -139,4 +167,3 @@ public class Car extends Transport {
         System.out.println("Зарядка на электроду-парковке, если электрокар");
     }*/
 
-}

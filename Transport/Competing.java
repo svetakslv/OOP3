@@ -2,8 +2,9 @@ package Transport;
 
 public interface Competing {
 
-    getPitStop();
-    getBestLapTime();
-    getMaximumSpeed();
+    void getPitStop(String pit_stop);
+
+    int[] getBestLapTime();
+    int[] getMaximumSpeed();
 
 }
