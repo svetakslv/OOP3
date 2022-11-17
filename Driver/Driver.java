@@ -16,17 +16,6 @@ public abstract class Driver <T extends Transport> {
         this.car = car;
     }
 
-    public String getFullName() {
-        return fullName;
-    }
-
-    public String getLicense() {
-        return license;
-    }
-
-    public int getExperience() {
-        return experience;
-    }
 
     public void startMoving() {
         System.out.printf("Водитель %s начал движение", this.fullName);
@@ -40,14 +29,18 @@ public abstract class Driver <T extends Transport> {
         System.out.printf("Водитель %s заправляется", this.fullName);
     }
 
-    @Override
-    public String toString() {
-        return "Водитель " + getFullName() + " управляет автомобилем " + getBrand() + getModel() + " и будет учавствовать в заезде";
+    public void getModel() {
+        getModel();
     }
 
-    protected abstract String getModel();
+    public String getBrand() {
+        return getBrand();
+    }
 
-    protected abstract String getBrand();
-    
-
+    @Override
+    public String toString() {
+        return "Водитель " + fullName +
+                " управляет автомобилем " + car +
+                " и будет учавствовать в заезде";
+    }
 }

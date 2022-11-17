@@ -2,40 +2,25 @@ package Driver;
 
 import Transport.Car;
 
-public abstract class DriverB extends Driver <Car> {
+public class DriverB extends Driver <Car> {
 
     public DriverB(String fullName, String license, int experience, String car) {
-        super("Иванов Иван", "B", 10, "lexus");
-    }
-    @Override
-    public String getFullName() {
-        return super.getFullName();
+        super("Иванов Иван", "B", 10, "Lexus LC 500");
     }
 
     @Override
-    public String getLicense() {
-        return super.getLicense();
+    public void getModel() {
+        getModel();
     }
 
     @Override
-    public int getExperience() {
-        return super.getExperience();
+    public String getBrand() {
+        return getBrand();
     }
 
-    @Override
-    public void startMoving() {
-        super.startMoving();
-    }
-
-    @Override
-    public void stopMoving() {
-        super.stopMoving();
-    }
-
-    @Override
-    public void refueling() {
-        super.refueling();
-    }
+ /*   public void printDriverB() {
+        System.out.println("Водитель " + fullName + " управляет автомобилем" + getBrand() + getModel() + " и будет учавствовать в заезде");
+    }*/
 }
 
 

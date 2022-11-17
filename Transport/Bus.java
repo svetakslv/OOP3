@@ -1,6 +1,6 @@
 package Transport;
 
- public abstract class Bus extends Transport implements Competing {
+ public class Bus extends Transport implements Competing {
      /*    public int ticketPrice;*/
      /*    private String busStation;*/
      /*    private String busFinalStation;*/
@@ -65,7 +65,7 @@ package Transport;
          }
      }
 
-     public void start() {
+/*     public void start() {
          System.out.printf("Старт %s %s",
                  this.getBrand(),
                  this.getModel());
@@ -75,7 +75,7 @@ package Transport;
          System.out.printf("Финиш %s %s",
                  this.getBrand(),
                  this.getModel());
-     }
+     }*/
 
      public void printBus() {
          System.out.println("Марка и модель машины: " + getBrand() + getModel() + " , объемом двигателя: " + getEngineVolume());
@@ -86,6 +86,11 @@ package Transport;
          System.out.printf("Пит-стоп на 4 круге %s %s ",
                  this.getBrand(),
                  this.getModel());
+     }
+
+     @Override
+     public void getPitStop(String pit_stop) {
+
      }
 
      @Override

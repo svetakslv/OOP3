@@ -1,6 +1,6 @@
 package Transport;
 
-public abstract class Trucks extends Transport implements Competing{
+public class Trucks extends Transport implements Competing{
     private double engineVolume;
     public static final int[] bestLapTime = new int[4];
     public static final int[] maximumSpeed = new int[4];
@@ -18,7 +18,7 @@ public abstract class Trucks extends Transport implements Competing{
         return engineVolume;
     }
 
-    public void setEngineVolume(double engineVolume) {
+/*    public void setEngineVolume(double engineVolume) {
         if (Double.compare(engineVolume, 0.0) == 0) {
             this.engineVolume = 3.0;
         } else {
@@ -36,7 +36,7 @@ public abstract class Trucks extends Transport implements Competing{
         System.out.printf("Финиш %s %s",
                 this.getBrand(),
                 this.getModel());
-    }
+    }*/
 
     public void printTrucks() {
         System.out.println("Марка и модель машины: " + getBrand() + getModel() + " , объемом двигателя: " + getEngineVolume());
@@ -47,6 +47,11 @@ public abstract class Trucks extends Transport implements Competing{
         System.out.printf("Пит-стоп на 2 круге %s %s ",
                 this.getBrand(),
                 this.getModel());
+    }
+
+    @Override
+    public void getPitStop(String pit_stop) {
+
     }
 
     @Override

@@ -58,7 +58,7 @@ public abstract class Car extends Transport implements Competing {
         return this.engineVolume;
     }
 
-    public void setEngineVolume(double engineVolume) {
+/*    public void setEngineVolume(double engineVolume) {
         if (Double.compare(engineVolume, 0.0) == 0) {
             this.engineVolume = 1.5;
         } else {
@@ -76,7 +76,7 @@ public abstract class Car extends Transport implements Competing {
         System.out.printf("Финиш %s %s",
                 this.getBrand(),
                 this.getModel());
-    }
+    }*/
     public void printCar() {
         System.out.println("Марка и модель машины: " + getBrand() + getModel() + " , объемом двигателя: " + getEngineVolume());
     }
@@ -86,6 +86,11 @@ public abstract class Car extends Transport implements Competing {
         System.out.printf("Пит-стоп на 3 круге %s %s ",
                 this.getBrand(),
                 this.getModel());
+
+    }
+
+    @Override
+    public void getPitStop(String pit_stop) {
 
     }
 
