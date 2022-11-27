@@ -4,12 +4,10 @@ public interface Competing {
 
     void getPitStop(String pit_stop);
 
-    default int[] getBestLapTime() {
-        return new int[3];
-    }
+    int[] getBestLapTime();
+    int[] getMaximumSpeed();
 
-    default int[] getMaximumSpeed() {
-        return new int[3];
-    }
+    void getMaximumSpeed(int competing);
 
+    void getBestLapTime(int time);
 }

@@ -1,7 +1,6 @@
 package Driver;
 
-import Transport.Car;
-
+/*
 public class DriverB extends Driver <Car> {
 
     public DriverB(String fullName, String license, int experience, String car) {
@@ -18,9 +17,12 @@ public class DriverB extends Driver <Car> {
         return getBrand();
     }
 
- /*   public void printDriverB() {
+ */
+/*   public void printDriverB() {
         System.out.println("Водитель " + fullName + " управляет автомобилем" + getBrand() + getModel() + " и будет учавствовать в заезде");
-    }*/
+    }*//*
+
 }
+*/
 
 

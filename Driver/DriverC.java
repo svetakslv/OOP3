@@ -1,3 +1,4 @@
+/*
 package Driver;
 
 import Transport.Trucks;
@@ -18,4 +19,5 @@ public class DriverC extends Driver <Trucks>{
         return getBrand();
     }
 }
+*/
 

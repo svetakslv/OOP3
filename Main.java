@@ -1,8 +1,9 @@
-import Driver.DriverB;
+/*import Driver.DriverB;
 import Driver.DriverC;
-import Driver.DriverD;
+import Driver.DriverD;*/
 import Transport.Bus;
 import Transport.Car;
+import Transport.Competing;
 import Transport.Trucks;
 
 public class  Main {
@@ -54,43 +55,12 @@ public class  Main {
             @Override
             public void getPitStop(String pit_stop) {
             }
-
-            @Override
-            public int[] getBestLapTime() {
-                return super.getBestLapTime();
-            }
-
-            @Override
-            public int[] getMaximumSpeed() {
-                return super.getMaximumSpeed();
-            }
         };
-        DriverB driverB = new DriverB("Иванов Иван", "B", 10, "Lexus LC 500") {
-            @Override
-            public void getModel() {
-            }
-
-            @Override
-            public String getBrand() {
-                return null;
-            }
-        };
-        System.out.println(driverB);
 
         Car ford = new Car("Ford", " Mustang Shelby GT500", 5.2) {
 
             @Override
             public void getPitStop(String pit_stop) {
-            }
-
-            @Override
-            public int[] getBestLapTime() {
-                return super.getBestLapTime();
-            }
-
-            @Override
-            public int[] getMaximumSpeed() {
-                return super.getMaximumSpeed();
             }
         };
         Car bmw = new Car("BMW", " i8", 1.5) {
@@ -99,32 +69,12 @@ public class  Main {
             public void getPitStop(String pit_stop) {
             }
 
-            @Override
-            public int[] getBestLapTime() {
-                return super.getBestLapTime();
-            }
-
-            @Override
-            public int[] getMaximumSpeed() {
-                return super.getMaximumSpeed();
-            }
         };
         Car chevrolet = new Car("Chevrolet", " Camaro", 2.0) {
-
-
             @Override
             public void getPitStop(String pit_stop) {
             }
 
-            @Override
-            public int[] getBestLapTime() {
-                return super.getBestLapTime();
-            }
-
-            @Override
-            public int[] getMaximumSpeed() {
-                return super.getMaximumSpeed();
-            }
         };
 
         Trucks man = new Trucks("MAN", " TGL", 6.9) {
@@ -134,57 +84,18 @@ public class  Main {
             public void getPitStop(String pit_stop) {
             }
 
-            @Override
-            public int[] getBestLapTime() {
-                return super.getBestLapTime();
-            }
-
-            @Override
-            public int[] getMaximumSpeed() {
-                return super.getMaximumSpeed();
-            }
         };
-        DriverC driverC = new DriverC("Наумов Николай", "C", 7, "MAN TGL") {
-            @Override
-            public void getModel() {
-            }
-
-            @Override
-            public String getBrand() {
-                return null;
-            }
-        };
-        System.out.println(driverC);
-
         Trucks volvo = new Trucks("Volvo", " FH", 12.8) {
             @Override
             public void getPitStop(String pit_stop) {
             }
 
-            @Override
-            public int[] getBestLapTime() {
-                return super.getBestLapTime();
-            }
-
-            @Override
-            public int[] getMaximumSpeed() {
-                return super.getMaximumSpeed();
-            }
         };
         Trucks scania = new Trucks("Scania", " R500", 16.0) {
             @Override
             public void getPitStop(String pit_stop) {
             }
 
-            @Override
-            public int[] getBestLapTime() {
-                return super.getBestLapTime();
-            }
-
-            @Override
-            public int[] getMaximumSpeed() {
-                return super.getMaximumSpeed();
-            }
         };
         Trucks kamaz = new Trucks("Камаз", " 6520", 11.8) {
 
@@ -192,15 +103,6 @@ public class  Main {
             public void getPitStop(String pit_stop) {
             }
 
-            @Override
-            public int[] getBestLapTime() {
-                return super.getBestLapTime();
-            }
-
-            @Override
-            public int[] getMaximumSpeed() {
-                return super.getMaximumSpeed();
-            }
         };
 
         Bus liaz = new Bus("Лиаз-", " 4292", 4.43) {
@@ -209,28 +111,7 @@ public class  Main {
             public void getPitStop(String pit_stop) {
             }
 
-            @Override
-            public int[] getBestLapTime() {
-                return super.getBestLapTime();
-            }
-
-            @Override
-            public int[] getMaximumSpeed() {
-                return super.getMaximumSpeed();
-            }
         };
-        DriverD driverD = new DriverD("Волков Алексей", "D", 17, "Лиаз-4292") {
-            @Override
-            public void getModel() {
-            }
-
-            @Override
-            public String getBrand() {
-                return null;
-            }
-        };
-        System.out.println(driverD);
-        System.out.println();
 
         Bus icarus = new Bus("Icarus", " 125", 7.7) {
 
@@ -238,15 +119,6 @@ public class  Main {
             public void getPitStop(String pit_stop) {
             }
 
-            @Override
-            public int[] getBestLapTime() {
-                return super.getBestLapTime();
-            }
-
-            @Override
-            public int[] getMaximumSpeed() {
-                return super.getMaximumSpeed();
-            }
         };
         Bus mercedes = new Bus("Mercedes-Benz", " Sprinter", 3.0) {
 
@@ -254,15 +126,6 @@ public class  Main {
             public void getPitStop(String pit_stop) {
             }
 
-            @Override
-            public int[] getBestLapTime() {
-                return super.getBestLapTime();
-            }
-
-            @Override
-            public int[] getMaximumSpeed() {
-                return super.getMaximumSpeed();
-            }
         };
         Bus higer = new Bus("Higer", " KLQ 6885", 6.7) {
 
@@ -271,102 +134,123 @@ public class  Main {
             public void getPitStop(String pit_stop) {
             }
 
-            @Override
-            public int[] getBestLapTime() {
-                return super.getBestLapTime();
-            }
-
-            @Override
-            public int[] getMaximumSpeed() {
-                return super.getMaximumSpeed();
-            }
         };
 
         lexus.printCar();
         lexus.getPitStop();
-        lexus.getBestLapTime();
-        lexus.getMaximumSpeed();
         System.out.println();
         System.out.println();
 
         ford.printCar();
         ford.getPitStop();
-        ford.getBestLapTime();
-        ford.getMaximumSpeed();
         System.out.println();
         System.out.println();
 
         bmw.printCar();
         bmw.getPitStop();
-        bmw.getBestLapTime();
-        bmw.getMaximumSpeed();
         System.out.println();
         System.out.println();
 
         chevrolet.printCar();
         chevrolet.getPitStop();
-        chevrolet.getBestLapTime();
-        chevrolet.getMaximumSpeed();
         System.out.println();
         System.out.println();
 
         man.printTrucks();
         man.getPitStop();
-        man.getBestLapTime();
-        man.getMaximumSpeed();
         System.out.println();
         System.out.println();
 
         volvo.printTrucks();
         volvo.getPitStop();
-        volvo.getBestLapTime();
-        volvo.getMaximumSpeed();
         System.out.println();
         System.out.println();
 
         scania.printTrucks();
         scania.getPitStop();
-        scania.getBestLapTime();
-        scania.getMaximumSpeed();
         System.out.println();
         System.out.println();
 
         kamaz.printTrucks();
         kamaz.getPitStop();
-        kamaz.getBestLapTime();
-        kamaz.getMaximumSpeed();
         System.out.println();
         System.out.println();
 
         liaz.printBus();
         liaz.getPitStop();
-        liaz.getBestLapTime();
-        liaz.getMaximumSpeed();
         System.out.println();
         System.out.println();
 
         icarus.printBus();
         icarus.getPitStop();
-        icarus.getBestLapTime();
-        icarus.getMaximumSpeed();
         System.out.println();
         System.out.println();
 
         mercedes.printBus();
         mercedes.getPitStop();
-        mercedes.getBestLapTime();
-        mercedes.getMaximumSpeed();
         System.out.println();
         System.out.println();
 
         higer.printBus();
         higer.getPitStop();
-        higer.getBestLapTime();
-        higer.getMaximumSpeed();
         System.out.println();
         System.out.println();
 
+
+        System.out.println("Легковые автомобили, максимальная скорость: ");
+        lexus.getMaximumSpeed(Car.SPEED_LEXUS);
+        ford.getMaximumSpeed(Car.SPEED_FORD);
+        bmw.getMaximumSpeed(Car.SPEED_BMW);
+        chevrolet.getMaximumSpeed(Car.SPEED_CHEVROLETE);
+//        checkCompetingsSpeed(lexus, ford, bmw, chevrolet);
+        System.out.println("Лучшее время: ");
+        lexus.getBestLapTime(Car.TIME_LEXUS);
+        ford.getBestLapTime(Car.TIME_FORD);
+        bmw.getBestLapTime(Car.TIME_BMW);
+        chevrolet.getBestLapTime(Car.TIME_CHEVROLETE);
+//        checkCompetingsTime(lexus, ford, bmw, chevrolet);
+        System.out.println();
+        System.out.println("Грузовые автомобили, максимальная скорость: ");
+        man.getMaximumSpeed(Trucks.SPEED_MAN);
+        volvo.getMaximumSpeed(Trucks.SPEED_VOLVO);
+        scania.getMaximumSpeed(Trucks.SPEED_SCANIA);
+        kamaz.getMaximumSpeed(Trucks.SPEED_KAMAZ);
+        System.out.println("Лучшее время: ");
+        man.getBestLapTime(Trucks.TIME_MAN);
+        volvo.getBestLapTime(Trucks.TIME_VOLVO);
+        scania.getBestLapTime(Trucks.TIME_SCANIA);
+        kamaz.getBestLapTime(Trucks.TIME_KAMAZ);
+
+        System.out.println();
+        System.out.println("Автобусы, максимальная скорость: ");
+        liaz.getMaximumSpeed(Bus.SPEED_LIAZ);
+        icarus.getMaximumSpeed(Bus.SPEED_ICARUS);
+        mercedes.getMaximumSpeed(Bus.SPEED_MERCEDES);
+        higer.getMaximumSpeed(Bus.SPEED_HIGER);
+        System.out.println("Лучшее время: ");
+        liaz.getBestLapTime(Bus.TIME_LIAZ);
+        icarus.getBestLapTime(Bus.TIME_ICARUS);
+        mercedes.getBestLapTime(Bus.TIME_MERCEDES);
+        higer.getBestLapTime(Bus.TIME_HIGER);
+
     }
-}
+
+    public static void checkCompetingsSpeed(Competing ... transports) {
+        for (Competing transport : transports) {
+            for (int speed : transport.getMaximumSpeed()) {
+                transport.getMaximumSpeed(speed);
+            }
+        }
+    }
+
+        public static void checkCompetingsTime (Competing ...transports){
+            for (Competing transport : transports) {
+                for (int time : transport.getBestLapTime()) {
+                    transport.getBestLapTime(time);
+                }
+            }
+        }
+    }
+
 
 

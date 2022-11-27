@@ -1,14 +1,23 @@
 package Transport;
 
-public abstract class Car extends Transport implements Competing {
+public class Car extends Transport implements Competing {
     private double engineVolume;
-    public static final int[] bestLapTime = {3, 5, 2, 1};
-    public static final int[] maximumSpeed = {270, 290, 250, 240};
+    public static final int SPEED_LEXUS = 270;
+    public static final int SPEED_FORD = 290;
+    public static final int SPEED_BMW = 250;
+    public static final int SPEED_CHEVROLETE = 240;
 
-   // private String transmission;
-   // private String regNumber;
-   // protected int seats;
-   // protected boolean rubberSum;
+    public static final int TIME_LEXUS = 3;
+    public static final int TIME_FORD = 2;
+    public static final int TIME_BMW = 4;
+    public static final int TIME_CHEVROLETE = 5;
+    public static final int[] ALL_MAXIMUM_SPEED = {SPEED_LEXUS, SPEED_FORD, SPEED_BMW, SPEED_CHEVROLETE};
+    private int[] ALL_LAP_TIME = {TIME_LEXUS, TIME_FORD, TIME_BMW, TIME_CHEVROLETE};
+
+    // private String transmission;
+    // private String regNumber;
+    // protected int seats;
+    // protected boolean rubberSum;
 
     public Car(String brand, String model, double engineVolume) {
         super(brand, model);
@@ -58,25 +67,25 @@ public abstract class Car extends Transport implements Competing {
         return this.engineVolume;
     }
 
-/*    public void setEngineVolume(double engineVolume) {
-        if (Double.compare(engineVolume, 0.0) == 0) {
-            this.engineVolume = 1.5;
-        } else {
-            this.engineVolume = engineVolume;
+    /*    public void setEngineVolume(double engineVolume) {
+            if (Double.compare(engineVolume, 0.0) == 0) {
+                this.engineVolume = 1.5;
+            } else {
+                this.engineVolume = engineVolume;
+            }
         }
-    }
 
-    public void start() {
-        System.out.printf("Старт %s %s",
-                this.getBrand(),
-                this.getModel());
-    }
+        public void start() {
+            System.out.printf("Старт %s %s",
+                    this.getBrand(),
+                    this.getModel());
+        }
 
-    public void finish() {
-        System.out.printf("Финиш %s %s",
-                this.getBrand(),
-                this.getModel());
-    }*/
+        public void finish() {
+            System.out.printf("Финиш %s %s",
+                    this.getBrand(),
+                    this.getModel());
+        }*/
     public void printCar() {
         System.out.println("Марка и модель машины: " + getBrand() + getModel() + " , объемом двигателя: " + getEngineVolume());
     }
@@ -96,13 +105,50 @@ public abstract class Car extends Transport implements Competing {
 
     @Override
     public int[] getBestLapTime() {
-        return bestLapTime;
+        return ALL_LAP_TIME;
     }
 
     @Override
     public int[] getMaximumSpeed() {
-        return maximumSpeed;
+        return ALL_MAXIMUM_SPEED;
     }
+
+    @Override
+    public void getBestLapTime(int time) {
+        switch (time) {
+            case TIME_LEXUS:
+                System.out.println("Время: " + TIME_LEXUS + " секунд(ы)");
+                break;
+            case TIME_FORD:
+                System.out.println("Время: " + TIME_FORD + " секунд(ы)");
+                break;
+            case TIME_BMW:
+                System.out.println("Время: " + TIME_BMW + " секунд(ы)");
+                break;
+            case TIME_CHEVROLETE:
+                System.out.println("Время: " + TIME_CHEVROLETE + " секунд(ы)");
+                break;
+        }
+
+    }
+
+    public void getMaximumSpeed(int speed) {
+        switch (speed) {
+            case SPEED_LEXUS:
+                System.out.println("Lexus LC 500: " + SPEED_LEXUS + " км/ч");
+                break;
+            case SPEED_FORD:
+                System.out.println("Ford Mustang Shelby GT500: " + SPEED_FORD + " км/ч");
+                break;
+            case SPEED_BMW:
+                System.out.println("BMW i8: " + SPEED_BMW + " км/ч");
+                break;
+            case SPEED_CHEVROLETE:
+                System.out.println("Chevrolet Camaro: " + SPEED_CHEVROLETE + " км/ч");
+                break;
+        }
+    }
+
 }
 
     /*   public String getTransmission() {
