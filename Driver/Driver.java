@@ -2,20 +2,17 @@ package Driver;
 
 import Transport.Transport;
 
-public abstract class Driver <T extends Transport> {
+public  class Driver <T extends Transport> {
     protected final String fullName;
-    private final String license;
+    public boolean license;
     private final int experience;
-    protected final String car;
     
 
-    protected Driver(String fullName, String license, int experience, String car) {
+    public Driver(String fullName, boolean license, int experience) {
         this.fullName = fullName;
         this.license = license;
         this.experience = experience;
-        this.car = car;
     }
-
 
     public void startMoving() {
         System.out.printf("Водитель %s начал движение", this.fullName);
@@ -26,7 +23,11 @@ public abstract class Driver <T extends Transport> {
     }
 
     public void refueling() {
-        System.out.printf("Водитель %s заправляется", this.fullName);
+        System.out.printf("Водитель %s заправляет автомобиль", this.fullName);
+    }
+
+    public String getFullName() {
+        return fullName;
     }
 
     public void getModel() {
@@ -37,10 +38,5 @@ public abstract class Driver <T extends Transport> {
         return getBrand();
     }
 
-    @Override
-    public String toString() {
-        return "Водитель " + fullName +
-                " управляет автомобилем " + car +
-                " и будет учавствовать в заезде";
     }
-}
+

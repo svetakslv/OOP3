@@ -1,6 +1,6 @@
-/*import Driver.DriverB;
+import Driver.DriverB;
 import Driver.DriverC;
-import Driver.DriverD;*/
+import Driver.DriverD;
 import Transport.Bus;
 import Transport.Car;
 import Transport.Competing;
@@ -232,6 +232,21 @@ public class  Main {
         icarus.getBestLapTime(Bus.TIME_ICARUS);
         mercedes.getBestLapTime(Bus.TIME_MERCEDES);
         higer.getBestLapTime(Bus.TIME_HIGER);
+        System.out.println();
+
+
+
+        DriverB ivan = new DriverB("Иван",true,10);
+        ivan.driveCar(chevrolet);
+        System.out.println();
+
+        DriverC nikolai = new DriverC("Николай",true, 17);
+        nikolai.driveTrucks(scania);
+        System.out.println();
+
+        DriverD aleksei = new DriverD("Алексей",true, 6);
+        aleksei.driveBus(higer);
+        System.out.println();
 
     }
 
