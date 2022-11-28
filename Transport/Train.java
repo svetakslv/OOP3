@@ -1,13 +1,13 @@
-package Transport;
+/*package Transport;
 
-public class train extends transport {
+public class Train extends Transport {
     public int priceOfTrip;
     public double travelTime;
     private String station;
     private String finalStop;
     public int wagons;
 
-    public train(String brand, String model, int productionYear, String productionCountry,
+    public Train(String brand, String model, int productionYear, String productionCountry,
                  String color, int speed, int priceOfTrip, double travelTime, String station, String finalStop, int wagons) {
         super(brand, model, productionYear, productionCountry, color, speed);
 
@@ -76,5 +76,4 @@ public class train extends transport {
     public void refill() {
         System.out.println("Заправка дизелем");
     }
-}
-
+}*/
