@@ -1,6 +1,7 @@
 package Transport;
 
 public class Car extends Transport implements Competing {
+    private TypeOfBody typeOfBody;
     private double engineVolume;
     public static final int SPEED_LEXUS = 270;
     public static final int SPEED_FORD = 290;
@@ -19,8 +20,9 @@ public class Car extends Transport implements Competing {
     // protected int seats;
     // protected boolean rubberSum;
 
-    public Car(String brand, String model, double engineVolume) {
+    public Car(String brand, String model, double engineVolume, TypeOfBody typeOfBody) {
         super(brand, model);
+        this.typeOfBody = typeOfBody;
         if (Double.compare(engineVolume, 0.0) == 0) {
             this.engineVolume = 1.5;
         } else {
@@ -62,6 +64,14 @@ public class Car extends Transport implements Competing {
         return this.seats;
     }
 */
+
+    public TypeOfBody getTypeOfBody() {
+        return typeOfBody;
+    }
+
+    public void setTypeOfBody (TypeOfBody typeOfBody) {
+        this.typeOfBody = typeOfBody;
+    }
 
     public double getEngineVolume() {
         return this.engineVolume;
@@ -146,6 +156,14 @@ public class Car extends Transport implements Competing {
             case SPEED_CHEVROLETE:
                 System.out.println("Chevrolet Camaro: " + SPEED_CHEVROLETE + " км/ч");
                 break;
+        }
+    }
+    @Override
+    public void printType() {
+        if(typeOfBody == null){
+            System.out.println("Данных по автомобилю не достаточно");
+        }else{
+            System.out.println("Тип кузова автомобиля - " + typeOfBody);
         }
     }
 

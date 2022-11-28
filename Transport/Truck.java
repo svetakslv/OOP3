@@ -1,6 +1,7 @@
 package Transport;
 
-public class Trucks extends Transport implements Competing{
+public class Truck extends Transport implements Competing{
+    private LoadCapacity loadCapacity;
     private double engineVolume;
     public static final int SPEED_MAN = 100;
     public static final int SPEED_VOLVO = 90;
@@ -14,13 +15,22 @@ public class Trucks extends Transport implements Competing{
     public static final int[] ALL_MAXIMUM_SPEED_TRUCKS = {SPEED_MAN, SPEED_VOLVO, SPEED_SCANIA, SPEED_KAMAZ};
     private int[] ALL_LAP_TIME_TRUCKS = {TIME_MAN, TIME_VOLVO, TIME_SCANIA, TIME_KAMAZ};
 
-    public Trucks(String brand, String model, double engineVolume) {
+    public Truck(String brand, String model, double engineVolume, LoadCapacity loadCapacity) {
         super(brand, model);
+        this.loadCapacity = loadCapacity;
         if (Double.compare(engineVolume, 0.0) == 0) {
             this.engineVolume = 3.0;
         } else {
             this.engineVolume = engineVolume;
         }
+    }
+
+    public LoadCapacity getLoadCapacity() {
+        return loadCapacity;
+    }
+
+    public void setLoadCapacity(LoadCapacity loadCapacity) {
+        this.loadCapacity = loadCapacity;
     }
 
     public double getEngineVolume() {
@@ -105,6 +115,17 @@ public class Trucks extends Transport implements Competing{
             case SPEED_KAMAZ:
                 System.out.println("Камаз 6520: " + SPEED_KAMAZ + " км/ч");
                 break;
+        }
+    }
+
+    @Override
+    public void printType() {
+        if(loadCapacity == null){
+            System.out.println("Данных по автомобилю не достаточно");
+        }else{
+                String from = loadCapacity.getFrom() == null ? "" : " от " + loadCapacity.getFrom();
+                String to = loadCapacity.getTo() == null ? "" : " от " + loadCapacity.getTo();
+            System.out.println("Тип грузоподъемности - " + from + to);
         }
     }
 

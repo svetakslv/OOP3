@@ -40,7 +40,7 @@ package Transport;
 /*     public void refill() {
          System.out.println("Заправка бензином или дизелем на заправке");
      }*/
-
+     private Capacity capacity;
      private double engineVolume;
      public static final int SPEED_LIAZ = 85;
      public static final int SPEED_ICARUS = 106;
@@ -53,13 +53,21 @@ package Transport;
      public static final int TIME_HIGER = 12;
      public static final int[] ALL_MAXIMUM_SPEED_BUS = {SPEED_LIAZ, SPEED_ICARUS, SPEED_MERCEDES, SPEED_HIGER};
      private int[] ALL_LAP_TIME_BUS = {TIME_LIAZ, TIME_ICARUS, TIME_MERCEDES, TIME_HIGER};
-     public Bus(String brand, String model, double engineVolume) {
+     public Bus(String brand, String model, double engineVolume, Capacity capacity) {
          super(brand, model);
          if (Double.compare(engineVolume, 0.0) == 0) {
              this.engineVolume = 6.9;
          } else {
              this.engineVolume = engineVolume;
          }
+     }
+
+     public Capacity getCapacity() {
+         return capacity;
+     }
+
+     public void setCapacity(Capacity capacity) {
+         this.capacity = capacity;
      }
 
      public double getEngineVolume() {
@@ -144,6 +152,14 @@ package Transport;
              case SPEED_HIGER:
                  System.out.println("Higer KLQ 6885: " + SPEED_HIGER + " км/ч");
                  break;
+         }
+     }
+     @Override
+     public void printType() {
+         if(capacity == null){
+             System.out.println("Данных по автомобилю не достаточно");
+         }else{
+             System.out.println("Вместимость автобуса от: " + capacity.getFrom() + " до: " + capacity.getTo());
          }
      }
 

@@ -1,8 +1,8 @@
 package Driver;
 
-import Transport.Trucks;
+import Transport.Truck;
 
-public class DriverC extends Driver <Trucks> {
+public class DriverC extends Driver <Truck> {
 
     public DriverC(String fullName, boolean license, int experience) {
         super(fullName, license, experience);
@@ -27,7 +27,7 @@ public class DriverC extends Driver <Trucks> {
             super.refueling();
         }
 
-        public void driveTrucks (Trucks truck){
+        public void driveTruck (Truck truck){
             System.out.printf("Водитель %s управляет автомобилем %s %s и будет участвовать в заезде.",
                     this.fullName,
                     truck.getModel(),

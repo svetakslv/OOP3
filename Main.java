@@ -1,10 +1,7 @@
 import Driver.DriverB;
 import Driver.DriverC;
 import Driver.DriverD;
-import Transport.Bus;
-import Transport.Car;
-import Transport.Competing;
-import Transport.Trucks;
+import Transport.*;
 
 public class  Main {
 
@@ -38,7 +35,7 @@ public class  Main {
         leningrad.refill();
 
         System.out.println(" ");*/
-/*        Bus gaz = new Bus("Газель NEXT", "A65R25-60", 2021,"России", "черный", 120, 30, "Академика Сахарова", "Московский вокзал", 1.35);
+/*      Bus gaz = new Bus("Газель NEXT", "A65R25-60", 2021,"России", "черный", 120, 30, "Академика Сахарова", "Московский вокзал", 1.35);
         Bus liaz = new Bus("Лиаз-", "5292 рестайлинг", 2020, "России", "голубой", 90, 28, "Кузнечиха-2", "Площадь Горького", 1.5);
         Bus man = new Bus("MAN", "49", 2018, "России", "белый", 80, 2000, "Чебоксары", "Казань", 3);
 
@@ -49,85 +46,33 @@ public class  Main {
         gaz.refill();
         liaz.refill();
         man.refill();*/
-
-
-        Car lexus = new Car("Lexus", " LC 500", 5.0) {
+        Car lexus = new Car("Lexus", " LC 500", 5.0, TypeOfBody.compartment) {
             @Override
             public void getPitStop(String pit_stop) {
             }
         };
 
-        Car ford = new Car("Ford", " Mustang Shelby GT500", 5.2) {
+        Car ford = new Car("Ford", " Mustang Shelby GT500", 5.2, TypeOfBody.compartment) {
 
             @Override
             public void getPitStop(String pit_stop) {
             }
         };
-        Car bmw = new Car("BMW", " i8", 1.5) {
-
-            @Override
-            public void getPitStop(String pit_stop) {
-            }
-
-        };
-        Car chevrolet = new Car("Chevrolet", " Camaro", 2.0) {
-            @Override
-            public void getPitStop(String pit_stop) {
-            }
-
-        };
-
-        Trucks man = new Trucks("MAN", " TGL", 6.9) {
-
+        Car bmw = new Car("BMW", " i8", 1.5, TypeOfBody.compartment) {
 
             @Override
             public void getPitStop(String pit_stop) {
             }
 
         };
-        Trucks volvo = new Trucks("Volvo", " FH", 12.8) {
-            @Override
-            public void getPitStop(String pit_stop) {
-            }
-
-        };
-        Trucks scania = new Trucks("Scania", " R500", 16.0) {
-            @Override
-            public void getPitStop(String pit_stop) {
-            }
-
-        };
-        Trucks kamaz = new Trucks("Камаз", " 6520", 11.8) {
-
+        Car chevrolet = new Car("Chevrolet", " Camaro", 2.0, TypeOfBody.compartment) {
             @Override
             public void getPitStop(String pit_stop) {
             }
 
         };
 
-        Bus liaz = new Bus("Лиаз-", " 4292", 4.43) {
-
-            @Override
-            public void getPitStop(String pit_stop) {
-            }
-
-        };
-
-        Bus icarus = new Bus("Icarus", " 125", 7.7) {
-
-            @Override
-            public void getPitStop(String pit_stop) {
-            }
-
-        };
-        Bus mercedes = new Bus("Mercedes-Benz", " Sprinter", 3.0) {
-
-            @Override
-            public void getPitStop(String pit_stop) {
-            }
-
-        };
-        Bus higer = new Bus("Higer", " KLQ 6885", 6.7) {
+        Truck man = new Truck("MAN", " TGL", 6.9, LoadCapacity.N2) {
 
 
             @Override
@@ -135,6 +80,57 @@ public class  Main {
             }
 
         };
+        Truck volvo = new Truck("Volvo", " FH", 12.8, LoadCapacity.N3) {
+            @Override
+            public void getPitStop(String pit_stop) {
+            }
+
+        };
+        Truck scania = new Truck("Scania", " R500", 16.0, LoadCapacity.N3) {
+            @Override
+            public void getPitStop(String pit_stop) {
+            }
+
+        };
+        Truck kamaz = new Truck("Камаз", " 6520", 11.8, LoadCapacity.N3) {
+
+            @Override
+            public void getPitStop(String pit_stop) {
+            }
+
+        };
+
+        Bus liaz = new Bus("Лиаз-", " 4292", 4.43, Capacity.small) {
+
+            @Override
+            public void getPitStop(String pit_stop) {
+            }
+
+        };
+
+        Bus icarus = new Bus("Icarus", " 125", 7.7, Capacity.large) {
+
+            @Override
+            public void getPitStop(String pit_stop) {
+            }
+
+        };
+        Bus mercedes = new Bus("Mercedes-Benz", " Sprinter", 3.0, Capacity.small) {
+
+            @Override
+            public void getPitStop(String pit_stop) {
+            }
+
+        };
+        Bus higer = new Bus("Higer", " KLQ 6885", 6.7, Capacity.medium) {
+
+
+            @Override
+            public void getPitStop(String pit_stop) {
+            }
+
+        };
+
 
         lexus.printCar();
         lexus.getPitStop();
@@ -211,15 +207,15 @@ public class  Main {
 //        checkCompetingsTime(lexus, ford, bmw, chevrolet);
         System.out.println();
         System.out.println("Грузовые автомобили, максимальная скорость: ");
-        man.getMaximumSpeed(Trucks.SPEED_MAN);
-        volvo.getMaximumSpeed(Trucks.SPEED_VOLVO);
-        scania.getMaximumSpeed(Trucks.SPEED_SCANIA);
-        kamaz.getMaximumSpeed(Trucks.SPEED_KAMAZ);
+        man.getMaximumSpeed(Truck.SPEED_MAN);
+        volvo.getMaximumSpeed(Truck.SPEED_VOLVO);
+        scania.getMaximumSpeed(Truck.SPEED_SCANIA);
+        kamaz.getMaximumSpeed(Truck.SPEED_KAMAZ);
         System.out.println("Лучшее время: ");
-        man.getBestLapTime(Trucks.TIME_MAN);
-        volvo.getBestLapTime(Trucks.TIME_VOLVO);
-        scania.getBestLapTime(Trucks.TIME_SCANIA);
-        kamaz.getBestLapTime(Trucks.TIME_KAMAZ);
+        man.getBestLapTime(Truck.TIME_MAN);
+        volvo.getBestLapTime(Truck.TIME_VOLVO);
+        scania.getBestLapTime(Truck.TIME_SCANIA);
+        kamaz.getBestLapTime(Truck.TIME_KAMAZ);
 
         System.out.println();
         System.out.println("Автобусы, максимальная скорость: ");
@@ -235,19 +231,20 @@ public class  Main {
         System.out.println();
 
 
-
-        DriverB ivan = new DriverB("Иван",true,10);
+        DriverB ivan = new DriverB("Иван", true, 10);
         ivan.driveCar(chevrolet);
+        chevrolet.printType();
         System.out.println();
 
-        DriverC nikolai = new DriverC("Николай",true, 17);
-        nikolai.driveTrucks(scania);
+        DriverC nikolai = new DriverC("Николай", true, 17);
+        nikolai.driveTruck(scania);
+        scania.printType();
         System.out.println();
 
-        DriverD aleksei = new DriverD("Алексей",true, 6);
+        DriverD aleksei = new DriverD("Алексей", true, 6);
         aleksei.driveBus(higer);
+        higer.printType();
         System.out.println();
-
     }
 
     public static void checkCompetingsSpeed(Competing ... transports) {
